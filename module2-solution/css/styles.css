@@ -1,66 +1,96 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
-    text-align: center;
-    background-color: #f1f1f1;
-    padding: 20px;
+  text-align: center;
+  background-color: #fffefe;
+  padding: 50px;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Estilos para el contenedor de las secciones */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Asegura que las secciones estén alineadas horizontalmente */
+  margin: 0 20px; /* Márgenes horizontales para las secciones */
 }
 
 /* Estilos para las secciones */
 .section {
-    background-color: #e0e0e0;
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid black;
-    position: relative;
+  background-color: #626161;
+  padding: 30px; /* Aumentamos el padding para dar más espacio */
+  border: 2px solid black;
+  position: relative; /* Para posicionar el título en la esquina superior derecha */
+  min-height: 150px; /* Aseguramos que haya suficiente altura para el contenido */
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Espacio entre las secciones verticalmente */
 }
 
+/* Estilo para los títulos de sección */
 .title {
-    background-color: #ccc;
-    color: #333;
-    padding: 5px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  color: rgb(7, 7, 7);
+  border: 2px solid black;
+  padding: 10px;
+  position: absolute; /* Posicionamiento absoluto */
+  top: -2px;
+  right: -2px;
+  font-weight: bold;
+}
+
+/* Colores diferentes para cada título */
+.title-chicken {
+  background-color: #df9999; /* Rojo tomate para Pollo */
+}
+
+.title-beef {
+  background-color: #b05050; /* Marrón para Carne */
+}
+
+.title-sushi {
+  background-color: #fae398; /* Verde Lima para Sushi */
 }
 
 /* Consultas de medios (Media Queries) */
+
+/* Vista de escritorio (992px y más) */
 @media (min-width: 992px) {
-    /* Vista de escritorio */
-    .section {
-        width: 30%;
-        float: left;
-        margin-right: 3.33%; /* Espacio entre secciones */
-    }
-    .section:last-child {
-        margin-right: 0; /* Eliminar margen en la última sección */
-    }
+  .section {
+    width: 30%;
+    margin-right: 3.33%; /* Espacio entre las secciones */
+  }
+  .section:last-child {
+    margin-right: 0; /* Eliminar el margen en la última sección */
+  }
 }
 
+/* Vista de tableta (entre 768px y 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
-    /* Vista de tableta */
-    .section {
-        width: 48%; /* 2 secciones por fila */
-        margin-right: 4%;
-    }
-    .section:last-child {
-        margin-right: 0;
-    }
+  .section {
+    width: 48%; /* 2 secciones por fila */
+    margin-right: 4%;
+  }
+  .section:last-child {
+    margin-right: 0;
+  }
 
-    .section:nth-child(3) {
-        width: 100%; /* La tercera sección ocupa toda la fila */
-    }
+  .section:nth-child(3) {
+    width: 100%; /* La tercera sección ocupa toda la fila */
+  }
 }
 
+/* Vista móvil (igual o menor a 767px) */
 @media (max-width: 767px) {
-    /* Vista móvil */
-    .section {
-        width: 100%; /* Cada sección ocupa toda la fila */
-        margin-right: 0;
-    }
+  .section {
+    width: 100%; /* Cada sección ocupa toda la fila */
+    margin-right: 0;
+  }
 }
