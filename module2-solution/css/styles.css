@@ -1,0 +1,66 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Estilos para las secciones */
+.section {
+    background-color: #e0e0e0;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.title {
+    background-color: #ccc;
+    color: #333;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Consultas de medios (Media Queries) */
+@media (min-width: 992px) {
+    /* Vista de escritorio */
+    .section {
+        width: 30%;
+        float: left;
+        margin-right: 3.33%; /* Espacio entre secciones */
+    }
+    .section:last-child {
+        margin-right: 0; /* Eliminar margen en la última sección */
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    /* Vista de tableta */
+    .section {
+        width: 48%; /* 2 secciones por fila */
+        margin-right: 4%;
+    }
+    .section:last-child {
+        margin-right: 0;
+    }
+
+    .section:nth-child(3) {
+        width: 100%; /* La tercera sección ocupa toda la fila */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Vista móvil */
+    .section {
+        width: 100%; /* Cada sección ocupa toda la fila */
+        margin-right: 0;
+    }
+}
